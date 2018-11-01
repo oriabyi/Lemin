@@ -1,0 +1,25 @@
+570
+##start
+first 23 3
+second 16 7
+#comment
+third 16 3
+fourth 16 5
+fifth 9 3
+sixth 1 5
+seventh 4 8
+##end
+end 9 5
+end-fourth
+end-sixth
+first-third
+fourth-third
+fifth-second
+third-fifth
+#another comment
+fourth-second
+second-first
+seventh-sixth
+seventh-second
+seventh-fourth
+sixth-fifth
