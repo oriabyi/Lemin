@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_are_nums.c                                      :+:      :+:    :+:   */
+/*   parse_rooms_dop.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/01 16:28:32 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/11/01 16:29:10 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/11/01 15:52:56 by ariabyi           #+#    #+#             */
+/*   Updated: 2018/11/02 11:25:55 by ariabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/lem_in.h"
 
-int			are_nums(char *s)
+void		free_char_matrix(char **str)
 {
-	if (s == NULL)
-		return (-1);
-	else
-	{
-		while (*s)
-		{
-			if (!(*s >= '0' && *s <= '9') && *s != '-')
-				return (0);
-			s++;
-		}
-	}
-	return (1);
+	int		counter;
+
+	counter = 0;
+	while (str[counter])
+		free(str[counter++]);
+	free(str);
 }

@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ariabyi/CLionProjects/Lemin/includes/lem_in.h
+stdio.h
+-
+../libft/libft.h
+/Users/ariabyi/CLionProjects/Lemin/libft/libft.h
+
+/Users/ariabyi/CLionProjects/Lemin/libft/libft.h
+unistd.h
+-
+stdlib.h
+-
+string.h
+-
+zconf.h
+-
+stdarg.h
+-
+fcntl.h
+-
+sys/types.h
+-
+sys/uio.h
+-
+unistd.h
+-
+fcntl.h
+-
+stdlib.h
+-
+
+/Users/ariabyi/CLionProjects/Lemin/src/parse_links.c
+../includes/lem_in.h
+/Users/ariabyi/CLionProjects/Lemin/includes/lem_in.h
+

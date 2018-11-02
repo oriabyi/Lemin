@@ -6,40 +6,59 @@
 #    By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/11 15:21:59 by ariabyi           #+#    #+#              #
-#    Updated: 2018/11/01 17:12:35 by ariabyi          ###   ########.fr        #
+#    Updated: 2018/11/02 11:59:35 by ariabyi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-.PHONY:         all clean fclean re $(NAME)
+.PHONY:         all clean fclean re
 
 CC = gcc
-NAME = lem_in
-SRC = ants.c clean.c clean_rooms.c flags.c get_ways.c get_ways_dop.c \
-		get_ways_dop1.c main.c error_check.c parse_links.c parse_links_dop.c \
-		parse_rooms.c parse_rooms_dop.c parsing.c print_ways_and_ants.c \
-		auxiliary.c
+NAME = lem-in
+SRCDIR = src/
+SRC =	$(SRCDIR)ants.c					\
+		$(SRCDIR)clean.c				\
+		$(SRCDIR)clean_rooms.c 			\
+		$(SRCDIR)flags.c				\
+		$(SRCDIR)get_ways.c				\
+		$(SRCDIR)get_ways_dop.c			\
+		$(SRCDIR)get_ways_dop1.c		\
+		$(SRCDIR)main.c					\
+		$(SRCDIR)error_check.c			\
+		$(SRCDIR)parse_links.c			\
+		$(SRCDIR)parse_links_dop.c		\
+		$(SRCDIR)parse_rooms.c			\
+		$(SRCDIR)parse_rooms_dop.c		\
+		$(SRCDIR)parsing.c				\
+		$(SRCDIR)print_ways_and_ants.c	\
+		$(SRCDIR)auxiliary.c				
 
-CFLAGS = #-Wall -Wextra -Werror
-HEADER = -I ./lem_in.h
+CFLAGS = -Wall -Wextra -Werror
+HEADER = -I ./includes -I ./libft/libft.h
 LIBINCL = -L. libft/libft.a
-LIBDIR = ./libft
-OBJFOLD = ./obj/
-OBJ = $(addprefix $(OBJFOLD),$(patsubst %.c, %.o, $(SRC)))
+LIBDIR = ./libft/
+OBJFOLD = ./.obj/
+OBJ = $(addprefix $(OBJFOLD), $(SRC:.c=.o))
+
 all:            $(NAME)
-$(NAME):        $(OBJ)
+
+$(NAME): $(OBJ)
 	@make -C $(LIBDIR) -f Makefile
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBINCL) $(LIBPRINTINCL)
+	$(CC) $(CFLAGS) $(LIBINCL) $(HEADER) -o $(NAME) $(OBJ) 
 	@echo "lem_in: done"
+
 $(OBJFOLD)%.o: %.c
-	@mkdir -p $(OBJFOLD)
+	@mkdir -p $(OBJFOLD)$(SRCDIR)
 	$(CC) $(CFLAGS) $(HEADER) -o $@ -c $<
+
 clean:
 	@rm -rf $(OBJFOLD)
 	@make -C $(LIBDIR) -f Makefile clean
 	@echo "objects removed"
+
 fclean: clean
 	@rm -f $(NAME)
 	@make -C $(LIBDIR) -f Makefile fclean
 	@echo "binary removed"
+
 re:             fclean all
 
