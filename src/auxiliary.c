@@ -24,10 +24,11 @@ void			print_map(char *line, uint8_t color_on)
 
 int				check_line(char **line)
 {
-	if (!*line || **line == '\0' || **line == '\n')
+	if (!line || !*line)
+		return (1);
+	if (**line == '\0' || **line == '\n')
 	{
-		if (*line && (**line == '\0' || **line == '\n'))
-			ft_strdel(line);
+		ft_strdel(line);
 		return (1);
 	}
 	return (0);
@@ -46,10 +47,10 @@ t_room			*cp_room(t_room *room)
 	return (ret);
 }
 
-int 			count_chars(char *s, char c)
+int				count_chars(char *s, char c)
 {
-	int i;
-	
+	int			i;
+
 	if (!s)
 		return (0);
 	i = 0;
@@ -60,4 +61,24 @@ int 			count_chars(char *s, char c)
 		s++;
 	}
 	return (i);
+}
+
+int				ft_strpos_last(const char *s, int c)
+{
+	int			place;
+	int			last;
+
+	last = 0;
+	place = 0;
+	if (!s)
+		return (0);
+	while (s[place])
+	{
+		if (s[place] == (char)c)
+		{
+			last = place;
+		}
+		place++;
+	}
+	return (s[last] == c ? last : 0);
 }

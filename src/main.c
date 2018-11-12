@@ -31,7 +31,6 @@ int				main(int ac, char **av)
 	approve_flags(lemin.flags);
 	line = parse_all(&lemin);
 	get_ways(&lemin);
-	print_ways(&lemin);
 	flags_proc(&lemin, line);
 	move_ants(&lemin);
 	system("leaks -q lem-in");

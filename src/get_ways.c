@@ -88,6 +88,8 @@ void			get_ways(t_lemin *lemin)
 	t_ways	*res;
 
 	phial = NULL;
+	lemin->start->next = NULL;
+	lemin->start->prev = NULL;
 	while (1)
 	{
 		res = get_all_ways(lemin, lemin->start, lemin->end, &phial);

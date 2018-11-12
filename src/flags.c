@@ -82,18 +82,19 @@ void			approve_flags(t_flags *flags)
 	if (flags->color_on)
 		color = ft_strdup(L_RED);
 	else
-		color = NULL;
-	buf = ft_strdup("");
+		color = ft_strdup(RESET);
+	buf = ft_strdup("@");
 	buf = ft_multjoinfr(5, color, NULL, buf,
 			"color_on\t\t= ", flags->color_on ? "true\n" : "false\n");
 	buf = ft_multjoinfr(5, color, NULL, buf,
-			"hide_map\t\t= ", flags->hide_map ? "true\n" : "false\n");
+			"@hide_map\t\t= ", flags->hide_map ? "true\n" : "false\n");
 	buf = ft_multjoinfr(5, color, NULL, buf,
-			"approve_flags\t\t= ", flags->approve_flags ? "true\n" : "false\n");
+			"@approve_flags\t\t= ",
+			flags->approve_flags ? "true\n" : "false\n");
 	buf = ft_multjoinfr(5, color, NULL, buf,
-			"one_way\t\t\t= ", flags->one_way ? "true\n" : "false\n");
+			"@one_way\t\t= ", flags->one_way ? "true\n" : "false\n");
 	buf = ft_multjoinfr(5, color, NULL, buf,
-			"show_ways\t\t= ", flags->show_ways ? "true\n" : "false\n");
+			"@show_ways\t\t= ", flags->show_ways ? "true\n" : "false\n");
 	buf = ft_multjoinfr(4, NULL, buf, RESET, "\n");
 	buf ? ft_putstr_fd_free(buf, 2) : ft_strdel(&buf);
 	free(color);

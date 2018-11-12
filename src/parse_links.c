@@ -24,32 +24,34 @@ char			*get_name_link(char *line)
 	return (ret);
 }
 
-int				is_oppo(t_room *room, int num)
+void			fill_links_get_names(t_lemin *lemin, char **first,
+					char **second, char *line)
 {
-	t_oppo		*head;
+	size_t		i;
+	size_t		temp;
+	char		*temp_str;
+	int			room_num;
+	t_room		*temp_room;
 
-	head = room->oppo;
-	while (head)
+	i = 1;
+	temp = ft_strlen(line);
+	while (i <= temp)
 	{
-		if (head->room && head->room->num == num)
-			return (1);
-		head = head->next;
+		room_num = lemin->num_rooms;
+		temp_str = ft_strsub(line, 0, i);
+		while (room_num-- && !*first)
+		{
+			if ((temp_room = get_room_by_name(lemin, temp_str)))
+			{
+				*first = ft_strdup(temp_room->name);
+				*second = ft_strdup(line + ft_strlen(*first) + 1);
+			}
+		}
+		ft_strdel(&temp_str);
+		if (*first)
+			break ;
+		i++;
 	}
-	return (0);
-}
-
-int				add_oppos(t_lemin *lemin, char *first, char *second)
-{
-	t_room		*temp_first;
-	t_room		*temp_second;
-
-	if (!(temp_first = get_room_by_name(lemin, first)))
-		return (NO_ROOM);
-	if (!(temp_second = get_room_by_name(lemin, second)))
-		return (NO_ROOM);
-	if (is_oppo(temp_first, temp_second->num) == 0)
-		return (add_oppo(temp_first, temp_second));
-	return (OK);
 }
 
 int				fill_links(t_lemin *lemin, char *line)
@@ -58,39 +60,64 @@ int				fill_links(t_lemin *lemin, char *line)
 	char		*first;
 	char		*second;
 
-	first = get_name_link(line);
-	second = get_name_link(line + ft_strlen(first) + 1);
-	code = add_oppos(lemin, first, second);
+	first = NULL;
+	second = NULL;
+	if (count_chars(line, '-') > 1)
+		fill_links_get_names(lemin, &first, &second, line);
+	else
+	{
+		if ((first = get_name_link(line)) && *first != '\0')
+			second = get_name_link(line + ft_strlen(first) + 1);
+		else
+			second = NULL;
+	}
+	if (first && second && *first != '\0' && *second != '\0')
+		code = add_oppos(lemin, first, second);
+	else
+		code = BAD_LINKS;
 	free(first);
 	free(second);
 	return (code);
+}
+
+int				get_links_help(t_lemin *lemin, int *code, char *line)
+{
+	if (*code == ANT)
+		return (free_str_return_int(&line, WRONG_PLACE_ANTS));
+	else if (*code == LINK)
+	{
+		if ((*code = fill_links(lemin, line)))
+			return (free_str_return_int(&line, *code));
+	}
+	else if (*code == ROOM || *code == MAIN_ROOM)
+		return (free_str_return_int(&line, WRONG_PLACE_ROOMS));
+	else if (*code == WRONG_DATA)
+		return (free_str_return_int(&line, WRONG_QUANTITY_ANTS));
+	return (*code);
 }
 
 int				get_links(t_lemin *lemin, char **ret)
 {
 	char		*line;
 	int			code;
+	int			i;
 
+	i = 0;
 	while ((code = gnl(0, &line)))
 	{
-		if (check_line(&line) == 1)
+		code = what_the_line_is(&line);
+		if (code == BAD_LINE)
 			break ;
-		else if (are_nums(line))
-			return (free_str_return_int(&line, WRONG_PLACE_ANTS));
-		else if (!ft_strcmp((line), "##start") || !ft_strcmp((line), "##end"))
-			return (free_str_return_int(&line, WRONG_PLACE_ROOMS));
-		else if (ft_strpos(line, '-') > 0)
+		else if (++i && (code == COMMENT || code == COMMAND))
 		{
-			if ((code = fill_links(lemin, line)))
-				return (free_str_return_int(&line, code));
+			*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
+			continue ;
 		}
-		else if (*line != '#')
-			return (free_str_return_int(&line, WRONG_PLACE_ROOMS));
+		else if (get_links_help(lemin, &code, line))
+			return (code);
 		*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
-		line = NULL;
 	}
 	if (code == 0)
 		free(line);
-//	return ((lemin->start->oppo) ? OK : NO_LINKS);//pridymai woto tolkovoe
-	return (OK);
+	return (i ? OK : NO_LINKS);
 }

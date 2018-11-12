@@ -12,6 +12,34 @@
 
 #include "../includes/lem_in.h"
 
+int				is_oppo(t_room *room, int num)
+{
+	t_oppo		*head;
+
+	head = room->oppo;
+	while (head)
+	{
+		if (head->room && head->room->num == num)
+			return (1);
+		head = head->next;
+	}
+	return (0);
+}
+
+int				add_oppos(t_lemin *lemin, char *first, char *second)
+{
+	t_room		*temp_first;
+	t_room		*temp_second;
+
+	if (!(temp_first = get_room_by_name(lemin, first)))
+		return (BAD_LINKS);
+	if (!(temp_second = get_room_by_name(lemin, second)))
+		return (BAD_LINKS);
+	if (is_oppo(temp_first, temp_second->num) == 0)
+		return (add_oppo(temp_first, temp_second));
+	return (OK);
+}
+
 void			concat_oppo(t_room *room, t_oppo *neigh)
 {
 	t_oppo		*temp;

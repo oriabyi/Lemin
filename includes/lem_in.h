@@ -31,6 +31,15 @@
 # define VISITED				2
 # define BLOCKED				3
 
+# define BAD_LINE 				1
+# define MAIN_ROOM				2
+# define COMMAND				3
+# define COMMENT				4
+# define ROOM					5
+# define LINK					6
+# define ANT					7
+# define WRONG_DATA  			8
+
 # define WRONG_PLACE_ROOMS		2
 # define WRONG_PLACE_LINKS		3
 # define WRONG_PLACE_ANTS		4
@@ -38,15 +47,16 @@
 # define WRONG_DATA_ROOMS		6
 # define WRONG_ARGUMENTS		7
 # define FIRST_CHR_ROOM_L		8
+# define BAD_LINKS				9
 
-# define NO_ROOM				9
-# define NO_LINKS				10
-# define NO_WAYS				11
-# define NO_END_ROOM			12
-# define NO_START_ROOM			13
-# define MULTI_MAIN_ROOMS		14
-# define MULTI__ROOMS			15
-# define MEMORY_ERROR			16
+# define NO_ROOM				10
+# define NO_LINKS				11
+# define NO_WAYS				12
+# define NO_END_ROOM			13
+# define NO_START_ROOM			14
+# define MULTI_MAIN_ROOMS		15
+# define MULTI__ROOMS			16
+# define MEMORY_ERROR			17
 
 typedef struct s_room	t_room;
 
@@ -119,6 +129,7 @@ typedef struct			s_lemin
 char					*parse_all(t_lemin *lemin);
 int						check_data(t_lemin *lemin);
 t_room					*get_room_by_name(t_lemin *lemin, char *name);
+int						what_the_line_is(char **line);
 
 /*
 ** parse links
@@ -130,11 +141,14 @@ int						fill_links(t_lemin *lemin, char *line);
 ** parse links help
 */
 int						add_oppo(t_room *first_main, t_room *second_main);
+int						add_oppos(t_lemin *lemin, char *first, char *second);
 
 /*
 ** parse rooms
 */
 int						get_rooms(t_lemin *lemin, char **ret);
+int						fill_rooms(t_lemin *lemin, char **line);
+int						bad_line_for_rooms(char **split, char *line);
 
 /*
 ** parse rooms help
@@ -172,7 +186,6 @@ void					clean_ways(t_ways **ways);
 */
 void					print_ants(t_lemin *lemin, char *buff);
 void					print_ways(t_lemin *lemin);
-void					print_map(char *line, uint8_t color_on);
 
 /*
 ** get ways
@@ -191,5 +204,5 @@ void					ft_putstr_fd_free(char *s, int fd);
 void					exit_message(t_lemin *lemin, char *message, int code);
 t_room					*cp_room(t_room *room);
 int						count_chars(char *s, char c);
-
+int						ft_strpos_last(const char *s, int c);
 #endif

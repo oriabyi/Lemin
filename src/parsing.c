@@ -12,6 +12,43 @@
 
 #include "../includes/lem_in.h"
 
+int				check_line_ants(char *line)
+{
+	int			i;
+
+	i = 0;
+	if (line == NULL)
+		return (1);
+	while (*line)
+	{
+		if (*line == '-' || (*line >= '0' && *line <= '9'))
+			break ;
+		line++;
+	}
+	if (*line == '-')
+		i++;
+	while (*line && (*line >= '0' && *line <= '9'))
+	{
+		line++;
+		i++;
+	}
+	return (i);
+}
+
+int				ant_code(int *quant_ants, char **ret, int *code, char *line)
+{
+	*quant_ants = ft_atoi(line);
+	if (*quant_ants > 0 && check_line_ants(line) == ft_pwrbase(*quant_ants, 10))
+		*code = OK;
+	else
+		*code = WRONG_QUANTITY_ANTS;
+	if (*code == OK)
+		*ret = ft_multjoinfr(4, NULL, *ret, line, "\n");
+	else
+		*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
+	return (1);
+}
+
 int				get_quant_ants(int *quant_ants, char **ret)
 {
 	char		*line;
@@ -19,26 +56,26 @@ int				get_quant_ants(int *quant_ants, char **ret)
 
 	while ((code = gnl(0, &line)) && !(*quant_ants))
 	{
-		if (check_line(&line) == 1)
-			break ;
-		else if (!(*quant_ants) && *line != '#')
+		code = what_the_line_is(&line);
+		if (code == COMMENT || code == COMMAND)
 		{
-			*quant_ants = ft_atoi(line);
-			if (!are_nums(line) || *quant_ants <= 0 || ft_strlen(line) != ft_pwrbase(*quant_ants, 10))
-				return (free_str_return_int(&line, WRONG_QUANTITY_ANTS));
 			*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
-			return (OK);
+			continue ;
 		}
-		else if (!ft_strcmp((line), "##start") || !ft_strcmp((line), "##end"))
-			return (free_str_return_int(&line, WRONG_PLACE_ROOMS));
-		else if (*line != '-' && ft_strchr(line, '-') && !ft_strchr(line, ' '))
+		if (code == BAD_LINE)
+			break ;
+		else if (code == ANT && ant_code(quant_ants, ret, &code, line))
+			break ;
+		else if (code == LINK)
 			return (free_str_return_int(&line, WRONG_PLACE_LINKS));
-		else if (*line != '#')
+		else if (code == ROOM || code == MAIN_ROOM)
 			return (free_str_return_int(&line, WRONG_PLACE_ROOMS));
+		else if (code == WRONG_DATA)
+			return (free_str_return_int(&line, WRONG_QUANTITY_ANTS));
 		*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
 	}
 	(code == 0) ? free(line) : 0;
-	return (*quant_ants ? OK : WRONG_QUANTITY_ANTS);
+	return (code);
 }
 
 void			copy_oppos_start_end(t_lemin *lemin)

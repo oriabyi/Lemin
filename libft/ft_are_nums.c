@@ -18,12 +18,17 @@ int			are_nums(char *s)
 		return (-1);
 	else
 	{
+		if (*s == '-' && (*(s + 1) >= '0' && *(s + 1) <= '9'))
+			s++;
+		else if (*s == '-' && !(*(s + 1) >= '0' && *(s + 1) <= '9'))
+			return (1);
 		while (*s)
 		{
-			if (!(*s >= '0' && *s <= '9') && *s != '-')
-				return (0);
-			s++;
+			if (*s >= '0' && *s <= '9')
+				s++;
+			else
+				return (1);
 		}
 	}
-	return (1);
+	return (0);
 }

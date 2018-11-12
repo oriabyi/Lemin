@@ -1,0 +1,25 @@
+1
+##start
+1 1 1
+##end
+2 2 2
+--3-- 3 3
+-4-- 4 4
+5 5 5
+1---3--
+--3----4--
+-4---2
+
+
+
+100 000
+./simple_prime 100000  1.83s user 0.01s system 89% cpu 2.042 total
+./prime_alg 100000  4.12s user 0.06s system 99% cpu 4.204 total
+
+300 000
+./simple_prime 300000  14.62s user 0.02s system 96% cpu 15.104 total
+./prime_alg 300000  33.13s user 0.52s system 99% cpu 33.976 total
+
+500 000
+./simple_prime 500000  38.99s user 0.05s system 98% cpu 39.687 total
+./prime_alg 500000  89.21s user 1.69s system 87% cpu 1:44.28 total

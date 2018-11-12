@@ -16,6 +16,7 @@ void		exit_message(t_lemin *lemin, char *message, int code)
 {
 	ft_putendl_fd(message, 2);
 	clean_all(lemin);
+	system("leaks -q lem-in");
 	exit(code);
 }
 
@@ -27,6 +28,8 @@ void		check_code_contin(t_lemin *lemin, int code)
 		exit_message(lemin, "ERROR: MULTI MAIN ROOMS!", code);
 	else if (code == MULTI__ROOMS)
 		exit_message(lemin, "ERROR: MULTI ROOMS!", code);
+	else if (code == BAD_LINKS)
+		exit_message(lemin, "ERROR: WRONG LINK DATA!", code);
 	else
 		exit_message(lemin, "ERROR!", ERROR);
 }

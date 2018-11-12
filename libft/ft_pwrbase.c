@@ -20,7 +20,7 @@ short int			ft_pwrbase(ssize_t num, int base)
 	counter = 1;
 	if (num < 0 || base < 0)
 		counter++;
-	if (num == base)
+	if (num == base && base < 10)
 		return (counter);
 	while ((num /= base))
 		counter++;
