@@ -21,10 +21,26 @@ int				check_data(t_lemin *lemin)
 	return (OK);
 }
 
-void 			clear_excess(t_lemin *lemin, t_room *head)
+void			clear_excess_help(t_lemin *lemin, t_room **head)
 {
 	t_room		*next;
-	
+
+	if (lemin->end && (*head)->num == lemin->end->num)
+		lemin->end = NULL;
+	if (lemin->start && (*head)->num == lemin->start->num)
+		lemin->start = NULL;
+	next = (*head)->next;
+	if ((*head)->next)
+		(*head)->next->prev = (*head)->prev;
+	if ((*head)->prev)
+		(*head)->prev->next = (*head)->next;
+	free((*head)->name);
+	free((*head));
+	(*head) = next;
+}
+
+void			clear_excess(t_lemin *lemin, t_room *head)
+{
 	head = lemin->rooms;
 	while (head->prev)
 		head = head->prev;
@@ -32,18 +48,7 @@ void 			clear_excess(t_lemin *lemin, t_room *head)
 	{
 		if (head->oppo == NULL)
 		{
-			if (lemin->end && head->num == lemin->end->num)
-				lemin->end = NULL;
-			if (lemin->start && head->num == lemin->start->num)
-				lemin->start = NULL;
-			next = head->next;
-			if (head->next)
-				head->next->prev = head->prev;
-			if (head->prev)
-				head->prev->next = head->next;
-			free(head->name);
-			free(head);
-			head = next;
+			clear_excess_help(lemin, &head);
 		}
 		else
 			head = head->next;
@@ -68,9 +73,7 @@ int				main(int ac, char **av)
 		check_code(&lemin, WRONG_DATA);
 	clear_excess(&lemin, NULL);
 	get_ways(&lemin);
-	
 	flags_proc(&lemin, line);
 	move_ants(&lemin);
-	system("leaks -q lem-in");
 	return (0);
 }

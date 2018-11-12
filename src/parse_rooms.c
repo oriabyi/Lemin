@@ -81,7 +81,8 @@ int				get_rooms_help(t_lemin *lemin,
 	else if (*code == MAIN_ROOM)
 	{
 		*ret = ft_multjoinfr(4, NULL, *ret, *line, "\n");
-		if ((*code = fill_mroom(lemin, !ft_strcmp((*line), "##start") ? 1 : 0, ret)))
+		if ((*code = fill_mroom(lemin,
+				!ft_strcmp((*line), "##start") ? 1 : 0, ret)))
 			return (free_str_return_int(line, *code));
 		ft_strdel(line);
 	}

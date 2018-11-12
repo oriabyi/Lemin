@@ -26,7 +26,7 @@ void			find_oppos(t_way **phial, t_room *cur)
 			if (cur->prev && cur->prev->num == oppo->room->num)
 				oppo->room->prev = cp_room(cur);
 			else
-					oppo->room->prev = cur;
+				oppo->room->prev = cur;
 			concat_way_nexus(phial, oppo->room);
 		}
 		oppo = oppo->next;
