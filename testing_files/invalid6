@@ -1,10 +1,10 @@
 4
 ##start
-st 1 1
-r1 1 1
+start 1 1
+Ignat 1 1
 ##end
 en 1 1
-r2 1 1
-r3 1 1
-st-r1
-r1-r2
+Lewa 1 1
+Miwa 1 1
+start-Ignat
+Ignat-Lewa

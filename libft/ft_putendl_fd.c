@@ -14,24 +14,13 @@
 
 void			ft_putendl_fd(char const *s, int fd)
 {
-	int			i;
 	char		*buf;
 	size_t		len;
-
-	i = 0;
+	
 	if (!s)
 		return ;
 	len = ft_strlen(s);
-	buf = (char *)malloc(sizeof(char) * (len));
-	while (*s)
-	{
-		buf[i] = *s;
-		i++;
-		s++;
-	}
-	buf[i++] = '\n';
-	buf[i] = '\0';
+	buf = ft_strjoin(s, "\n");
 	write(fd, buf, (len + 1));
 	free(buf);
-	ft_putstr(s);
 }

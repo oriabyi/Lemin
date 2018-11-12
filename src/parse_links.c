@@ -92,7 +92,7 @@ int				get_links_help(t_lemin *lemin, int *code, char *line)
 	else if (*code == ROOM || *code == MAIN_ROOM)
 		return (free_str_return_int(&line, WRONG_PLACE_ROOMS));
 	else if (*code == WRONG_DATA)
-		return (free_str_return_int(&line, WRONG_QUANTITY_ANTS));
+		return (free_str_return_int(&line, WRONG_DATA));
 	return (*code);
 }
 
@@ -100,24 +100,22 @@ int				get_links(t_lemin *lemin, char **ret)
 {
 	char		*line;
 	int			code;
-	int			i;
 
-	i = 0;
 	while ((code = gnl(0, &line)))
 	{
 		code = what_the_line_is(&line);
 		if (code == BAD_LINE)
 			break ;
-		else if (++i && (code == COMMENT || code == COMMAND))
+		else if (code == COMMENT || code == COMMAND)
 		{
 			*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
 			continue ;
 		}
-		else if (get_links_help(lemin, &code, line))
+		else if ((code = get_links_help(lemin, &code, line)))
 			return (code);
 		*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
 	}
 	if (code == 0)
 		free(line);
-	return (i ? OK : NO_LINKS);
+	return (OK);
 }

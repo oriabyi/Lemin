@@ -75,7 +75,7 @@ int				get_quant_ants(int *quant_ants, char **ret)
 		*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
 	}
 	(code == 0) ? free(line) : 0;
-	return (code);
+	return (*quant_ants ? code : WRONG_QUANTITY_ANTS);
 }
 
 void			copy_oppos_start_end(t_lemin *lemin)

@@ -38,16 +38,15 @@
 # define ROOM					5
 # define LINK					6
 # define ANT					7
-# define WRONG_DATA  			8
 
-# define WRONG_PLACE_ROOMS		2
-# define WRONG_PLACE_LINKS		3
-# define WRONG_PLACE_ANTS		4
-# define WRONG_QUANTITY_ANTS	5
-# define WRONG_DATA_ROOMS		6
-# define WRONG_ARGUMENTS		7
-# define FIRST_CHR_ROOM_L		8
-# define BAD_LINKS				9
+# define WRONG_PLACE_ROOMS		19
+# define WRONG_PLACE_LINKS		20
+# define WRONG_PLACE_ANTS		21
+# define WRONG_QUANTITY_ANTS	22
+# define WRONG_DATA_ROOMS		23
+# define WRONG_ARGUMENTS		24
+# define FIRST_CHR_ROOM_L		25
+# define BAD_LINKS				26
 
 # define NO_ROOM				10
 # define NO_LINKS				11
@@ -57,6 +56,7 @@
 # define MULTI_MAIN_ROOMS		15
 # define MULTI__ROOMS			16
 # define MEMORY_ERROR			17
+# define WRONG_DATA  			18
 
 typedef struct s_room	t_room;
 

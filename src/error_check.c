@@ -11,12 +11,15 @@
 /* ************************************************************************** */
 
 #include "../includes/lem_in.h"
+#include "../libft/ft_putendl_fd.c"
+#include "../libft/ft_putstr.c"
 
 void		exit_message(t_lemin *lemin, char *message, int code)
 {
 	ft_putendl_fd(message, 2);
 	clean_all(lemin);
 	system("leaks -q lem-in");
+	system("leaks -q Lemin");
 	exit(code);
 }
 
@@ -30,6 +33,8 @@ void		check_code_contin(t_lemin *lemin, int code)
 		exit_message(lemin, "ERROR: MULTI ROOMS!", code);
 	else if (code == BAD_LINKS)
 		exit_message(lemin, "ERROR: WRONG LINK DATA!", code);
+	else if (code == WRONG_DATA)
+		exit_message(lemin, "WRONG DATA!", WRONG_DATA);
 	else
 		exit_message(lemin, "ERROR!", ERROR);
 }

@@ -26,7 +26,7 @@ void			find_oppos(t_way **phial, t_room *cur)
 			if (cur->prev && cur->prev->num == oppo->room->num)
 				oppo->room->prev = cp_room(cur);
 			else
-				oppo->room->prev = cur;
+					oppo->room->prev = cur;
 			concat_way_nexus(phial, oppo->room);
 		}
 		oppo = oppo->next;
@@ -39,7 +39,7 @@ t_ways			*get_all_ways(t_lemin *lemin, t_room *cur,
 	t_ways		*ret;
 
 	ret = NULL;
-	if (!cur)
+	if (!cur || !end)
 		return (NULL);
 	cur->stat = VISITED;
 	if (cur->num == end->num)
@@ -54,7 +54,6 @@ void			set_default(t_lemin *lemin)
 {
 	t_room		*temp;
 
-	lemin->end->prev = NULL;
 	lemin->end->stat = NOVISITED;
 	temp = lemin->rooms;
 	while (temp)

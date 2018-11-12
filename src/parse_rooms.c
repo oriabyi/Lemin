@@ -47,7 +47,10 @@ int				fill_mroom(t_lemin *lemin, int code, char **ret)
 	char		*line;
 	char		**split;
 
-	gnl(0, &line);
+	while (gnl(0, &line) && line && *line == '#')
+	{
+		*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
+	}
 	split = ft_strsplit(line, ' ', 1);
 	ret_code = bad_line_for_rooms(split, line);
 	if (ret_code)
@@ -62,22 +65,28 @@ int				fill_mroom(t_lemin *lemin, int code, char **ret)
 }
 
 int				get_rooms_help(t_lemin *lemin,
-					char **ret, char *line, int *code)
+					char **ret, char **line, int *code)
 {
 	if (*code == LINK)
 	{
-		*code = fill_links(lemin, line);
-		*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
+		*code = fill_links(lemin, *line);
+		*ret = ft_multjoinfr(5, NULL, *ret, NULL, *line, "\n");
 		return (*code);
 	}
-	else if (*code == ROOM && ((*code = fill_rooms(lemin, &line))))
-		return (free_str_return_int(&line, *code));
-	else if (*code == MAIN_ROOM &&
-		((*code = fill_mroom(lemin,
-		!ft_strcmp((line), "##start") ? 1 : 0, ret))))
-		return (free_str_return_int(&line, *code));
+	else if (*code == ROOM)
+	{
+		if ((*code = fill_rooms(lemin, line)))
+			return (free_str_return_int(line, *code));
+	}
+	else if (*code == MAIN_ROOM)
+	{
+		*ret = ft_multjoinfr(4, NULL, *ret, *line, "\n");
+		if ((*code = fill_mroom(lemin, !ft_strcmp((*line), "##start") ? 1 : 0, ret)))
+			return (free_str_return_int(line, *code));
+		ft_strdel(line);
+	}
 	else if (*code == WRONG_DATA)
-		return (free_str_return_int(&line, WRONG_QUANTITY_ANTS));
+		return (free_str_return_int(line, WRONG_DATA));
 	return (-1);
 }
 
@@ -98,9 +107,10 @@ int				get_rooms(t_lemin *lemin, char **ret)
 			break ;
 		else if (code == ANT)
 			return (free_str_return_int(&line, WRONG_PLACE_ANTS));
-		else if ((code = get_rooms_help(lemin, ret, line, &code)) != -1)
+		else if ((code = get_rooms_help(lemin, ret, &line, &code)) != -1)
 			return (code);
-		*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
+		if (line)
+			*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
 	}
 	(code == 0) ? free(line) : 0;
 	return (lemin->rooms && lemin->start && lemin->end ? OK : WRONG_DATA_ROOMS);
