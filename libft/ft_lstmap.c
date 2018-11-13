@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/19 14:50:46 by ariabyi           #+#    #+#             */
 /*   Updated: 2017/11/27 17:21:38 by ariabyi          ###   ########.fr       */

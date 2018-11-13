@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_margin.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/01/21 12:20:12 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/01/21 12:23:06 by ariabyi          ###   ########.fr       */

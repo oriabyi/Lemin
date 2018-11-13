@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_pmult_fd.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/04 17:38:55 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/06/04 18:04:11 by ariabyi          ###   ########.fr       */

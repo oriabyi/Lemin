@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   get_ways.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/01 14:43:46 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/11/02 11:24:59 by ariabyi          ###   ########.fr       */

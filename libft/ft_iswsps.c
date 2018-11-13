@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iswsps.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/02 15:33:17 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/05/02 15:33:18 by ariabyi          ###   ########.fr       */

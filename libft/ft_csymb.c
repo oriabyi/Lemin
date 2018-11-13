@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_csymb.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/05 11:27:18 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/03/05 11:30:39 by ariabyi          ###   ########.fr       */

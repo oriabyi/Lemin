@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_wcase.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 10:49:25 by ariabyi           #+#    #+#             */
 /*   Updated: 2017/11/27 15:53:46 by ariabyi          ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_setnum.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/02 13:48:51 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/06/02 13:49:00 by ariabyi          ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   print_ways_and_ants.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/01 16:01:14 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/11/02 11:26:16 by ariabyi          ###   ########.fr       */

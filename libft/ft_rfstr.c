@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_rfstr.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/18 12:59:13 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/03/18 13:00:54 by ariabyi          ###   ########.fr       */

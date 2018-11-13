@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_iarr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/29 18:51:09 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/08/29 18:53:14 by ariabyi          ###   ########.fr       */

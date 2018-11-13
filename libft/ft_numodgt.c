@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_numodgt.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/10 17:34:37 by ariabyi           #+#    #+#             */
 /*   Updated: 2017/11/27 15:44:04 by ariabyi          ###   ########.fr       */

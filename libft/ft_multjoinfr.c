@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_multjoinfr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/01 16:30:54 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/11/01 16:31:02 by ariabyi          ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_are_nums.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/01 16:28:32 by ariabyi           #+#    #+#             */
 /*   Updated: 2018/11/01 16:29:10 by ariabyi          ###   ########.fr       */
