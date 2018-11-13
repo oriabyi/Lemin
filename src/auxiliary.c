@@ -24,12 +24,20 @@ void			print_map(char *line, uint8_t color_on)
 
 int				check_line(char **line)
 {
+	char 		*temp;
 	if (!line || !*line)
 		return (1);
 	if (**line == '\0' || **line == '\n')
 	{
 		ft_strdel(line);
 		return (1);
+	}
+	temp = *line;
+	while (*temp)
+	{
+		if (ft_isascii(*temp) == 0)
+			return (1);
+		temp++;
 	}
 	return (0);
 }

@@ -68,6 +68,7 @@ int				main(int ac, char **av)
 	get_flags(&lemin.flags, ac, (av + 1));
 	approve_flags(lemin.flags);
 	line = parse_all(&lemin);
+	exit(0);
 	if (!lemin.end || !lemin.end->oppo
 		|| !lemin.start || !lemin.start->oppo)
 		check_code(&lemin, WRONG_DATA);

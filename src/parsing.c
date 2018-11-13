@@ -54,6 +54,7 @@ int				get_quant_ants(int *quant_ants, char **ret)
 	char		*line;
 	int			code;
 
+	line = NULL;
 	while ((code = gnl(0, &line)) && !(*quant_ants))
 	{
 		code = what_the_line_is(&line);
@@ -74,7 +75,7 @@ int				get_quant_ants(int *quant_ants, char **ret)
 			return (free_str_return_int(&line, WRONG_QUANTITY_ANTS));
 		*ret = ft_multjoinfr(5, NULL, *ret, NULL, line, "\n");
 	}
-	(code == 0) ? free(line) : 0;
+	(code == 0 && line) ? free(line) : 0;
 	return (*quant_ants ? code : WRONG_QUANTITY_ANTS);
 }
 
@@ -98,7 +99,9 @@ char			*parse_all(t_lemin *lemin)
 	int			code;
 
 	ret = NULL;
+	
 	code = get_quant_ants(&(lemin->quant_ants), &ret);
+	
 	if (code == OK)
 		code = get_rooms(lemin, &ret);
 	if (code == OK)
