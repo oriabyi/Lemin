@@ -16,7 +16,7 @@ void			ft_putendl_fd(char const *s, int fd)
 {
 	char		*buf;
 	size_t		len;
-	
+
 	if (!s)
 		return ;
 	len = ft_strlen(s);

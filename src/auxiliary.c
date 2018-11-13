@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   trash.c                                            :+:      :+:    :+:   */
+/*   auxiliary.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -24,7 +24,8 @@ void			print_map(char *line, uint8_t color_on)
 
 int				check_line(char **line)
 {
-	char 		*temp;
+	char		*temp;
+
 	if (!line || !*line)
 		return (1);
 	if (**line == '\0' || **line == '\n')

@@ -49,12 +49,10 @@ int				ant_code(int *quant_ants, char **ret, int *code, char *line)
 	return (1);
 }
 
-int				get_quant_ants(int *quant_ants, char **ret)
+int				get_quant_ants(int *quant_ants, char **ret, char *line)
 {
-	char		*line;
 	int			code;
 
-	line = NULL;
 	while ((code = gnl(0, &line)) && !(*quant_ants))
 	{
 		code = what_the_line_is(&line);
@@ -99,9 +97,7 @@ char			*parse_all(t_lemin *lemin)
 	int			code;
 
 	ret = NULL;
-	
-	code = get_quant_ants(&(lemin->quant_ants), &ret);
-	
+	code = get_quant_ants(&(lemin->quant_ants), &ret, NULL);
 	if (code == OK)
 		code = get_rooms(lemin, &ret);
 	if (code == OK)
