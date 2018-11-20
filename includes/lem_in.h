@@ -204,5 +204,5 @@ void					ft_putstr_fd_free(char *s, int fd);
 void					exit_message(t_lemin *lemin, char *message, int code);
 t_room					*cp_room(t_room *room);
 int						count_chars(char *s, char c);
-int						ft_strpos_last(const char *s, int c);
+
 #endif

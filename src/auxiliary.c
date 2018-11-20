@@ -71,23 +71,3 @@ int				count_chars(char *s, char c)
 	}
 	return (i);
 }
-
-int				ft_strpos_last(const char *s, int c)
-{
-	int			place;
-	int			last;
-
-	last = 0;
-	place = 0;
-	if (!s)
-		return (0);
-	while (s[place])
-	{
-		if (s[place] == (char)c)
-		{
-			last = place;
-		}
-		place++;
-	}
-	return (s[last] == c ? last : 0);
-}

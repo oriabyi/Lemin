@@ -6,7 +6,7 @@
 /*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/10/30 14:18:27 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/08/29 18:53:53 by ariabyi          ###   ########.fr       */
+/*   Updated: 2018/11/20 10:42:15 by ariabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,6 @@ int					ft_check_iarr(int **arr, int x, int y, int num);
 char				*ft_multjoinfr(int field, ...);
 int					free_str_return_int(char **str, int ret);
 int					are_nums(char *s);
+int					lgnl(int fd, char **line);
 
 #endif

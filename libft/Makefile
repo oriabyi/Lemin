@@ -6,7 +6,7 @@
 #    By: ariabyi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/05/14 11:21:10 by ariabyi           #+#    #+#              #
-#    Updated: 2018/08/29 18:51:34 by ariabyi          ###   ########.fr        #
+#    Updated: 2018/11/20 10:41:53 by ariabyi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ SRC= ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c\
         ft_wcase.c ft_strcapitalize.c ft_sqrt.c ft_margin.c ft_pwrbase.c ft_csymb.c\
         ft_multjoin.c ft_mstrcmp.c ft_strprint.c ft_rfstr.c gnl.c ft_split_wsps.c\
 		ft_iswsps.c ft_pmult_fd.c ft_setnum.c ft_check_iarr.c ft_are_nums.c\
-		free_str_return_int.c ft_multjoinfr.c
+		free_str_return_int.c ft_multjoinfr.c lgnl.c
 
 all: $(NAME)
 
