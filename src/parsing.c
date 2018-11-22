@@ -53,7 +53,7 @@ int				get_quant_ants(int *quant_ants, char **ret, char *line)
 {
 	int			code;
 
-	while ((code = gnl(0, &line)) && !(*quant_ants))
+	while ((code = lgnl(0, &line)) && !(*quant_ants))
 	{
 		code = what_the_line_is(&line);
 		if (code == COMMENT || code == COMMAND)

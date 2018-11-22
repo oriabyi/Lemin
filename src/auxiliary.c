@@ -37,7 +37,10 @@ int				check_line(char **line)
 	while (*temp)
 	{
 		if (ft_isascii(*temp) == 0)
+		{
+			ft_strdel(line);
 			return (1);
+		}
 		temp++;
 	}
 	return (0);
