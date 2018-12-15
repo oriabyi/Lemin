@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/13 10:49:16 by ariabyi           #+#    #+#             */
-/*   Updated: 2017/11/13 13:30:37 by ariabyi          ###   ########.fr       */
+/*   Created: 2017/11/13 10:49:16 by oriabyi           #+#    #+#             */
+/*   Updated: 2017/11/13 13:30:37 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strprint.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/13 15:06:13 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/03/13 15:08:01 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/03/13 15:06:13 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/03/13 15:08:01 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

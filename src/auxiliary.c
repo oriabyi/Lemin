@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   auxiliary.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/01 16:02:53 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/11/02 11:24:17 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/11/01 16:02:53 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/11/02 11:24:17 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int				check_line(char **line)
 {
 	char		*temp;
 
-	if (!line || !*line)
+	if (line == NULL || *line == NULL)
 		return (1);
 	if (**line == '\0' || **line == '\n')
 	{

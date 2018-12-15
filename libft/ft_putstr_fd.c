@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 14:46:16 by ariabyi           #+#    #+#             */
-/*   Updated: 2017/11/24 18:18:40 by ariabyi          ###   ########.fr       */
+/*   Created: 2017/11/10 14:46:16 by oriabyi           #+#    #+#             */
+/*   Updated: 2017/11/24 18:18:40 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

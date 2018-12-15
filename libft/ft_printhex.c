@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printhex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/27 14:00:42 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/02/08 18:11:51 by ariabyi          ###   ########.fr       */
+/*   Created: 2017/11/27 14:00:42 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/02/08 18:11:51 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

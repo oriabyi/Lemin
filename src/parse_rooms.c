@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_rooms.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/01 15:43:55 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/11/02 11:25:43 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/11/01 15:43:55 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/11/02 11:25:43 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

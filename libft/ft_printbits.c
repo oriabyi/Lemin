@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printbits.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/27 13:10:30 by ariabyi           #+#    #+#             */
-/*   Updated: 2017/11/27 13:51:33 by ariabyi          ###   ########.fr       */
+/*   Created: 2017/11/27 13:10:30 by oriabyi           #+#    #+#             */
+/*   Updated: 2017/11/27 13:51:33 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

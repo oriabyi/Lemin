@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_check_iarr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/08/29 18:51:09 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/08/29 18:53:14 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/08/29 18:51:09 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/08/29 18:53:14 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

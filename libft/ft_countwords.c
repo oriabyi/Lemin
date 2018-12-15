@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_countwords.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/10 18:32:39 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/03/10 18:33:12 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/03/10 18:32:39 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/03/10 18:33:12 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

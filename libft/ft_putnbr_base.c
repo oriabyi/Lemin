@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/03 17:36:37 by ariabyi           #+#    #+#             */
-/*   Updated: 2017/11/03 17:36:40 by ariabyi          ###   ########.fr       */
+/*   Created: 2017/11/03 17:36:37 by oriabyi           #+#    #+#             */
+/*   Updated: 2017/11/03 17:36:40 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

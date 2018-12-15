@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 16:44:38 by ariabyi           #+#    #+#             */
-/*   Updated: 2017/12/04 11:34:02 by ariabyi          ###   ########.fr       */
+/*   Created: 2017/11/10 16:44:38 by oriabyi           #+#    #+#             */
+/*   Updated: 2017/12/04 11:34:02 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

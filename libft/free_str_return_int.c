@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   free_str_return_int.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ariabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
+/*   By: oriabyi <oleksandr32riabyi@gmail.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/01 16:29:35 by ariabyi           #+#    #+#             */
-/*   Updated: 2018/11/01 16:29:45 by ariabyi          ###   ########.fr       */
+/*   Created: 2018/11/01 16:29:35 by oriabyi           #+#    #+#             */
+/*   Updated: 2018/11/01 16:29:45 by oriabyi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
